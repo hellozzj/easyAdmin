@@ -11,6 +11,7 @@ easyadmin是用于根据表结构及表字段字段注释作为参数生成crud�
 
 ## 生成原理
 * ob_start打开输出控制缓冲，include对应模板文件，ob_get_contents 获取模板文件内容并替换对应变量，ob_end_clean 关闭缓冲，写入文件
+* 后台数据渲染与上同理
 
 ## 目录说明
 
