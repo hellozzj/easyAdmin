@@ -1,5 +1,5 @@
 # easyadmin
-easyadmin是用于根据表结构及表字段字段注释作为参数生成简易增删查改的工具.
+easyadmin是用于根据表结构及表字段字段注释作为参数生成crud的工具.
 
 ![image](https://github.com/hellozzj/easyAdmin/blob/dev/WechatIMG211.png)
 
