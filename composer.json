@@ -1,0 +1,16 @@
+{
+    "require": {
+        "maatwebsite/excel": "^3.0",
+        "lustre/php-dfa-sensitive": "^1.1",
+        "php-di/php-di": "^6.0",
+        "voku/anti-xss": "^4.1"
+    },
+    "autoload": {
+        "files": [
+          "app/common/helper.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

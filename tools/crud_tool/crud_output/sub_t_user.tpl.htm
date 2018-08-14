@@ -1,0 +1,37 @@
+<?php $this->block('pager');?>
+<?php echo $page;?>
+<?php $this->endBlock('pager');?>    
+<?php $this->block('pager_length');?>  
+<?php echo $pager_limit;?>
+<script>
+$('#sel_limit').val('<?php echo $limit;?>');
+</script>
+<?php $this->endBlock('pager_length');?>
+<div class="box-body">
+    <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+        <?php $this->loadBlock('pager_length');?>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped dataTable no-footer" id="example1" role="grid" aria-describedby="example1_info">
+                    <thead>
+                        <tr role="row">
+                                                                                </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php if($data){ ?>
+                    <?php foreach($data as $k=>$v){?>
+                    <tr role="row" class="<?php echo $k%2?'odd':'even'?>">
+                                                                    </tr>
+                    <?php }?>
+                    <?php }else{ ?>
+                    <tr class="odd"><td valign="top" colspan="30" class="dataTables_empty">暂无数据...</td></tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       <?php $this->loadBlock('pager');?>
+    </div>
+</div>	
+<!-- /.box-body -->

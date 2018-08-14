@@ -1,0 +1,21 @@
+<div style="padding:0px;margin-right:10px;width:160px" class="col-xs-2" >
+    <select class="form-control pull-right"  name="kw[parent_game_id]" id="parent_game_id" onchange="javascript:getGame('getGameChannel')">
+        <option value=''>一级游戏</option>
+
+    </select>
+</div>
+<div style="padding:0px;margin-right:10px;width:160px" class="col-xs-2" >
+    <select class="form-control pull-right" id="game_code"  name="kw[game_code]" onchange="javascript:getGameChannel()"> 
+        <option value=''>二级游戏</option>
+    </select>
+</div>
+<div style="padding:0px;margin-right:10px;width:160px" class="col-xs-2" >
+    <select class="form-control pull-right" id="channel_code" name="kw[channel_code]" />
+        <option value=''>渠道</option>
+    </select>
+</div>
+<script>
+$(function(){
+    getParentGame('getGame');
+})
+</script>

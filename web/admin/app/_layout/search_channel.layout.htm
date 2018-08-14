@@ -1,0 +1,21 @@
+<div style="padding:0px;margin-right:10px;width:160px" class="col-xs-2" >
+    <select class="form-control pull-right"  name="kw[channel_name]" id="channel_name">
+    </select>
+</div>
+<script>
+$.ajax({
+        type: "post",
+        url: '?act=common&mod=common&node=get_all_channel',
+        dataType:'text',
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",   
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+            alert(errorThrown);
+        },
+        success: function(data, textStatus, XMLHttpRequest){
+            $('#channel_name').html(data);
+            if (typeof(callback_channel_name) != "undefined") {
+                callback_channel_name();
+            }
+        }
+    });
+</script>

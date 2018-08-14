@@ -1,0 +1,53 @@
+<?php $this->block('pager');?>
+<?php echo $page;?>
+<?php $this->endBlock('pager');?>    
+<?php $this->block('pager_length');?>  
+<?php echo $pager_limit;?>
+<script>
+$('#sel_limit').val('<?php echo $limit;?>');
+</script>
+<?php $this->endBlock('pager_length');?>
+<div class="box-body">
+    <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+        <?php $this->loadBlock('pager_length');?>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered table-striped dataTable no-footer" id="example1" role="grid" aria-describedby="example1_info">
+                    <thead>
+                        <tr role="row">
+
+                            <th class="<?php echo $this->get_sorting('create_time');?>" order_by="create_time" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="" aria-sort="ascending" aria-label="创建时间: activate to sort column descending">创建时间</th>
+
+                            <th class="<?php echo $this->get_sorting('log_user');?>" order_by="log_user" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="" aria-sort="ascending" aria-label="操作者: activate to sort column descending">操作者</th>
+
+                            <th class="<?php echo $this->get_sorting('task_name');?>" order_by="task_name" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="" aria-sort="ascending" aria-label="任务名: activate to sort column descending">任务名</th>
+
+                            <th class="<?php echo $this->get_sorting('json_arr');?>" order_by="json_arr" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="" aria-sort="ascending" aria-label="详细内容: activate to sort column descending">详细内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    <?php if($data){ ?>
+                    <?php foreach($data as $k=>$v){?>
+                    <tr role="row" class="<?php echo $k%2?'odd':'even'?>">
+
+                        <td class="sorting_1"><?php echo $v['create_time']?date('Y-m-d H:i:s',$v['create_time']):'';?></td>
+
+                        <td class="sorting_1"><?php echo $v['log_user'];?></td>
+
+                        <td class="sorting_1"><?php echo $v['task_name'];?></td>
+
+                        <td class="sorting_1"><?php echo $v['json_arr'];?></td>
+                    </tr>
+                    <?php }?>
+                    <?php }else{ ?>
+                    <tr class="odd"><td valign="top" colspan="30" class="dataTables_empty">暂无数据...</td></tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <?php $this->loadBlock('pager');?>
+    </div>
+</div>	
+<!-- /.box-body -->

@@ -1,0 +1,28 @@
+<style>
+    .topmenu {
+        border-radius: 3px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 1px solid transparent;
+        background-color: #fff;
+        border-color: #ddd;
+        padding: 6px;
+        margin: 5px 5px;
+        width: 100px;
+    }
+</style>
+      <ul class="pagination">
+      <?php
+     foreach($menu as $mkey => $mvalue):
+            foreach($mvalue['sub'] as $skey => $svalue): 
+			if(isset($svalue['inside_page']) && $svalue['inside_page']){
+     ?> 
+     <li class="paginate_button">
+         <input class="topmenu" type='button' value="<?php echo $svalue['title'];?>" onclick="javascrtpt:window.location.href='<?php echo $svalue['url'];?>'"/>&nbsp;&nbsp;
+     </li>
+        <?php 
+                        }
+            endforeach;
+        endforeach;
+        ?>
+      </ul>

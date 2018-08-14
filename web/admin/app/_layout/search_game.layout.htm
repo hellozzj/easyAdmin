@@ -1,0 +1,22 @@
+<div style="padding:0px;margin-right:10px;width:160px" class="col-xs-2" >
+    <select class="form-control pull-right"  name="kw[game_code]" id="game_code">
+
+        </select>
+</div>
+<script>
+$.ajax({
+        type: "post",
+        url: '?act=common&mod=common&node=get_all_game',
+        dataType:'text',
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",   
+        error : function(XMLHttpRequest, textStatus, errorThrown){
+            alert(errorThrown);
+        },
+        success: function(data, textStatus, XMLHttpRequest){
+            $('#game_code').html(data);
+            if (typeof(callback_game_code) != "undefined") {
+                callback_game_code();
+            }
+        }
+    });
+</script>
