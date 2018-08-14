@@ -28,7 +28,7 @@ easyadmin是用于根据表结构及表字段字段注释作为参数生成简�
 	├── app.public              // 入口启动文件，常量定义、自动加载命名空间类、引用composer加载文件
     ├── app.tools.crud_tool		  // 模板生成工具包，列表、异步列表、编辑、删除模板
 	├── app.var               	// session以及log文件存放
-	├── app.web                 // 生成管理后台，需手动在admin/app目录下新建相应模块文件夹，并将生成文件移入
+	├── app.web                 // 管理后台具体文件
 
 
 ## 在线
