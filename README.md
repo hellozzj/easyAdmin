@@ -19,7 +19,7 @@ easyadmin是用于根据表结构及表字段字段注释作为参数生成crud�
 	├── app.common		          // 通用函数
 	├── 	helper.php						// 常用函数集合，字符串处理、时间处理、日志处理、curl、xss过滤等
 	├── app.config              // 配置文件             
-    ├──   db_dev.php						// 开发环境数据库配置文件，多环境可加 db_env.php
+    ├──   db_dev.php						// 开发环境数据库配置文件，支持一主多从配置，多环境可加 db_env.php
     |──   redis_dev.php					// 开发环境redis配置文件，多环境可加 redis_env.php
     |──   menu.php						  // 菜单配置文件，需手工配置
 	├── app.dal		              // 数据操作类
