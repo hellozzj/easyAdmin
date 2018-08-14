@@ -31,7 +31,7 @@ easyadmin是用于根据表结构及表字段字段注释作为参数生成简�
 	├── app.web                 // 管理后台具体文件
 
 
-## 在线
+## 测试
 * https://www.aifalse.com/tools/crud_tool
 * https://www.aifalse.com/web/admin/?mod=default&act=login   admin/123123
 
