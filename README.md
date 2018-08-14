@@ -34,7 +34,7 @@ easyadmin是用于根据表结构及表字段字段注释作为参数生成crud�
 
 ## 测试
 * https://www.aifalse.com/tools/crud_tool
-* https://www.aifalse.com/web/admin/?mod=default&act=login   admin/123123
+
 
 
 
